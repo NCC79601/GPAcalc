@@ -19,6 +19,8 @@
         <input type="number" id="credits" name="credits">
         <label for="grade">Grade:</label>
         <input type="number" id="grade" name="grade" step="0.01" min="0" max="4">
+        <label for="pf">P/F:</label>
+        <input type="checkbox" id="pf" name="pf">
         <input type="button" value="Add Course" onclick="addCourse()">
     </form>
     <br>
@@ -27,11 +29,14 @@
             <th>Course Name</th>
             <th>Credits</th>
             <th>Grade</th>
+            <th>P/F</th>
+            <th>Action</th>
         </tr>
     </table>
     <br>
     <button onclick="calculateGPA()">Calculate GPA</button>
     <p id="gpa"></p>
+    <p id="totalCredits"></p>
     <script src="gpa.js"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>GPA Calculator</h1>
+    <form id="courseForm">
+        <label for="courseName">Course Name:</label><br>
+        <input type="text" id="courseName" name="courseName"><br>
+        <label for="credits">Credits:</label><br>
+        <input type="number" id="credits" name="credits"><br>
+        <label for="grade">Grade:</label><br>
+        <input type="number" id="grade" name="grade" step="0.01" min="0" max="4"><br>
+        <input type="button" value="Add Course" onclick="addCourse()">
+    </form>
+    <br>
+    <table id="courseTable">
+        <tr>
+            <th>Course Name</th>
+            <th>Credits</th>
+            <th>Grade</th>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calculateGPA()">Calculate GPA</button>
+    <p id="gpa"></p>
+    <script src="gpa.js"></script>
+</body>
+</html>
